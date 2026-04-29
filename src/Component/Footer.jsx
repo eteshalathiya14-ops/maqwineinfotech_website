@@ -28,39 +28,43 @@ export default function Footer() {
           
           {/* Company Info */}
           <div>
-            <Link to="/" className="inline-block mb-6">
+            <Link to="/" className="inline-block mb-4">
               <img src={logo} alt="Maqwine Infotech" className="h-[50px] object-contain hover:scale-105 transition-transform" />
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed max-w-[280px] mb-6">
+            <p className="text-slate-400 text-sm leading-relaxed max-w-[280px] ">
               Maqwine Infotech is a top mobile app and web development company in Surat, India. We specialize in custom software solutions.
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-white font-bold text-lg mb-6" style={{ fontFamily: "'Syne', sans-serif" }}>Quick Links</h4>
-            <ul className="space-y-3">
-              {NAV_LINKS.map((link) => (
-                <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm font-medium block hover:translate-x-2"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className="grid grid-cols-2 gap-6">
+            
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-white font-bold text-base sm:text-lg mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                {NAV_LINKS.map((link) => (
+                  <li key={link.path}>
+                    <Link
+                      to={link.path}
+                      className="text-slate-400 hover:text-blue-400 text-sm block"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-white font-bold text-lg mb-6" style={{ fontFamily: "'Syne', sans-serif" }}>Services</h4>
-            <ul className="space-y-3">
-              <li><Link to="/services/web-development" className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm font-medium block hover:translate-x-2">Web Development</Link></li>
-              <li><Link to="/services/mobile-development" className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm font-medium block hover:translate-x-2">Mobile Apps</Link></li>
-              <li><Link to="/services/ui-ux-design" className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm font-medium block hover:translate-x-2">UI/UX Design</Link></li>
-            </ul>
+            {/* Services */}
+            <div>
+              <h4 className="text-white font-bold text-base sm:text-lg mb-4">Services</h4>
+              <ul className="space-y-2">
+                <li><Link to="/services/web-development" className="text-slate-400 hover:text-blue-400 text-sm block">Web Development</Link></li>
+                <li><Link to="/services/mobile-development" className="text-slate-400 hover:text-blue-400 text-sm block">Mobile Apps</Link></li>
+                <li><Link to="/services/ui-ux-design" className="text-slate-400 hover:text-blue-400 text-sm block">UI/UX Design</Link></li>
+              </ul>
+            </div>
+
           </div>
 
           {/* Contact & CTA */}

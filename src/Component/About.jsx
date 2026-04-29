@@ -157,20 +157,18 @@ export default function About() {
             <h4 className="text-base font-bold text-[#f0f9ff] mb-1" style={{ fontFamily: "'Syne', sans-serif" }}>Our Expertise</h4>
             <p className="text-[10px] text-slate-500 uppercase tracking-widest mb-5">What we build best</p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+            <div className="grid grid-cols-2 gap-3 mb-5">
               {EXPERTISE.map(({ icon, title, desc, tags, color, bg }) => (
-                <div key={title} className="rounded-xl p-3.5" style={{ background: `${bg}0.07)`, border: `1px solid ${color}30` }}>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                      style={{ background: `${bg}0.15)`, border: `1px solid ${color}50`, color }}>
-                      {icon}
-                    </div>
-                    <span className="text-xs font-bold text-[#f0f9ff]">{title}</span>
+                <div key={title} className="rounded-xl p-2.5" style={{ background: `${bg}0.07)`, border: `1px solid ${color}30` }}>
+                  <div className="w-7 h-7 rounded-lg flex items-center justify-center mb-2"
+                    style={{ background: `${bg}0.15)`, border: `1px solid ${color}50`, color }}>
+                    {icon}
                   </div>
-                  <p className="text-[10.5px] text-slate-500 leading-relaxed mb-2">{desc}</p>
+                  <span className="block text-[11px] font-bold text-[#f0f9ff] mb-1 leading-tight">{title}</span>
+                  <p className="text-[9.5px] text-slate-500 leading-relaxed mb-2">{desc}</p>
                   <div className="flex gap-1 flex-wrap">
                     {tags.map(t => (
-                      <span key={t} className="text-[9px] px-2 py-0.5 rounded-full"
+                      <span key={t} className="text-[8.5px] px-1.5 py-0.5 rounded-full"
                         style={{ background: `${bg}0.1)`, color, border: `1px solid ${color}33` }}>{t}</span>
                     ))}
                   </div>
@@ -214,7 +212,7 @@ export default function About() {
             style={{ opacity: valVis ? 1 : 0, transition: 'all 0.6s 0.1s ease' }}>
             What makes Maqwine Infotech different from the rest
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {VALUES.map((v, i) => (
               <ValueCard key={v.title} icon={v.icon} color={v.color} title={v.title} desc={v.desc} index={i} vis={valVis} />
             ))}

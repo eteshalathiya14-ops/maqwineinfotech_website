@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block useless paths
+Disallow: /src/
+Disallow: /node_modules/
+
+# Sitemap location
+Sitemap: https://www.maqwineinfotech.com/sitemap.xml
+
+# Speed hints
+Crawl-delay: 1
